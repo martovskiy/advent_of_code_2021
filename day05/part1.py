@@ -19,14 +19,14 @@ for line in lines:
         continue
     if x2 > x1 and y2 > y1:
         for y3 in range(min(y1, y2), max(y1, y2) + 1):
-            space[min(x1,x2)+y3-min(y1,y2), y3] += 1
+            space[min(x1, x2) + y3 - min(y1, y2), y3] += 1
         continue
     if x2 < x1 and y2 < y1:
         for y3 in range(min(y1, y2), max(y1, y2) + 1):
-            space[min(x1,x2)+y3-min(y1,y2), y3] += 1
+            space[min(x1, x2) + y3 - min(y1, y2), y3] += 1
         continue
     for y3 in range(min(y1, y2), max(y1, y2) + 1):
-        space[max(x1,x2)-y3+min(y1,y2), y3] += 1
+        space[max(x1, x2) - y3 + min(y1, y2), y3] += 1
 
 ans = sum(x > 1 for x in space.values())
 print(ans)
